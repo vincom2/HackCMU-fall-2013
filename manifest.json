@@ -4,7 +4,7 @@
   "name": "Piazza extension test",
   "version": "1.0",
   "description": "testing stuff lulz",
-  "permissions": ["://*.piazza.com/*"],
+  "permissions": ["http://*.piazza.com/*","https://*.piazza.com/*"],
 
   "content_scripts": [
   {
