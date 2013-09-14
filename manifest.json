@@ -9,7 +9,7 @@
   "content_scripts": [
   {
     "matches": ["http://piazza.com/*", "https://piazza.com/*"],
-    "js": ["test.js"]
+    "js": ["piazza.js"]
   }
   ]
 }
