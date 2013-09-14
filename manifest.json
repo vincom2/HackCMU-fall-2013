@@ -1,5 +1,5 @@
 {
-  "manifest-version": 2,
+  "manifest_version": 2,
 
   "name": "Piazza extension test",
   "version": "1.0",
@@ -7,7 +7,7 @@
   "permissions": ["://*.piazza.com/*"],
   "content_scripts": [
   {
-    "matches": ["://piazza.com/*"],
+    "matches": ["http://piazza.com/*", "https://piazza.com/*"],
     "js": ["test.js"]
   }
   ]
