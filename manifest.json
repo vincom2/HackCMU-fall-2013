@@ -1,0 +1,12 @@
+{
+  "name": "Piazza extension test",
+  "version": "1.0",
+  "description": "testing stuff lulz",
+  "permissions": ["://*.piazza.com/*"],
+  "content_scripts": [
+  {
+    "matches": ["://piazza.com/*"],
+    "js": ["test.js"]
+  }
+  ]
+}
