@@ -26,9 +26,11 @@ $toappend = '<li class="testing" onclick="history.back();">go back</li>';
 
 $(document).on('mouseenter', '[id^=FeedItemDropdown]', function() {
 	$('a').css({'background-color': 'yellow'});
-	$('[class=mark_unread_action]').append($toappend); //THIS JUST WON'T WORK
+	// $('[class=mark_unread_action]').append($toappend); //THIS JUST WON'T WORK
+	$('<ul>').appendTo('[id^=FeedItemDropdown]').append($toappend);
 });
 $(document).on('mouseleave', '[id^=FeedItemDropdown]', function() {
 	$('a').css({'background-color': 'yellow'});
-	$('[class=mark_unread_action]').append($toappend);
+	// $('[class=mark_unread_action]').append($toappend);
+	$('<ul>').appendTo('[id^=FeedItemDropdown]').append($toappend);
 });
