@@ -5,6 +5,7 @@
   "version": "1.0",
   "description": "testing stuff lulz",
   "permissions": ["://*.piazza.com/*"],
+
   "content_scripts": [
   {
     "matches": ["http://piazza.com/*", "https://piazza.com/*"],
