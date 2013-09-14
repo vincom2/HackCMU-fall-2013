@@ -9,7 +9,8 @@
   "content_scripts": [
   {
     "matches": ["*://piazza.com/*"],
-    "js": ["lib/jquery-1.10.2.js","piazza.js"]
+    "js": ["lib/jquery-1.10.2.js","piazza.js"],
+    "run_at": "document_end"
   }
   ],
 
