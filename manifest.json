@@ -1,6 +1,6 @@
 {
-  "manifest-version": "2",
-  
+  "manifest-version": 2,
+
   "name": "Piazza extension test",
   "version": "1.0",
   "description": "testing stuff lulz",
