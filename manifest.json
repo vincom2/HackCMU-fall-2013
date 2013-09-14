@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Piazza extension test",
+  "version": "1.0",
+  "description": "testing stuff lulz",
+  "permissions": ["http://*.piazza.com/*","https://*.piazza.com/*"],
+
+  "content_scripts": [
+  {
+    "matches": ["http://piazza.com/*", "https://piazza.com/*"],
+    "js": ["piazza.js"]
+  }
+  ]
+}
