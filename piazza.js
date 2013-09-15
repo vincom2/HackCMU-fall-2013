@@ -15,6 +15,6 @@ $(document).on('mouseenter mouseleave', '[id^=FeedItemDropdown]', function(e) {
 	// $toappend = '<li class="testing" onclick="location.href=\'' + $class_url + '?cid=' + $post_num.split(/@/)[1] + '\';">view post</li>';
 	$post_link = $class_url + '?cid=' + $post_num
 	$toappend = '<li class="testing" onclick=storePost('+$post_num+',"'+$post_link+'");>Save this post';
-	alert($toappend);
+	// alert($toappend);
 	$('<ul>').appendTo('[id^=FeedItemDropdown]').append($toappend);
 });
