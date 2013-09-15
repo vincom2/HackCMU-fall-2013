@@ -1,12 +1,12 @@
-alert('hi');
+// alert('hi');
 
 // $.getScript(chrome.extension.getURL("savestuff.js"), function() {
 //   console.log('savestuff.js successfully loaded in popup.js');
 // });
-alert(localStorage);
-for(var i=0; i< localStorage.length; i++) {
+alert(window.localStorage.length);
+for(var i=0; i< window.localStorage.length; i++) {
   alert('yo');
-  document.write(localStorage.key(i)+' '+localStorage[localStorage.key(i)]+'\n');
+  document.write(window.localStorage.key(i)+' '+window.localStorage[window.localStorage.key(i)]+'\n');
 }
 
-alert('bye');
+// alert('bye');

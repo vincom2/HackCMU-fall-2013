@@ -3,7 +3,10 @@ $.getScript(chrome.extension.getURL("savestuff.js"), function() {
 });
 
 window.addEventListener("asdf", function(e) {
-    chrome.extension.sendMessage({data: {id:e.id, link:e.link}});
+	ID = e.detail.id;
+	LINK = e.detail.link;
+	// alert('sending message with'+ID+LINK);
+    chrome.extension.sendMessage({data: {id:ID, link:LINK}});
 }, true);
 // window.addEventListener("load", function() {
 //     chrome.extension.sendMessage({

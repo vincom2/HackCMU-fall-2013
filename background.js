@@ -1,9 +1,9 @@
 function storePost1(id, link) {
 	try {
-    alert("storePost1");
+    // alert("id: "+id+", link: "+link);
 		// console.log("Storing [" + id + ":" + link + "]");
 		window.localStorage.removeItem(id);
-     	window.localStorage.setItem(id, link);
+    window.localStorage.setItem(id, link);
 	} catch(e) {
       console.log("Error inside setItem");
       console.log(e);

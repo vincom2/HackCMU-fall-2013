@@ -2,12 +2,12 @@ var eid = 'lhofepmhjdbipocjjeegpfalgkmggoka';
 
 
 
-function storePost(id, link) {
+function storePost(ID, LINK) {
 	console.log('fake event');
 	// chrome.extension.sendMessage({data: {id:id, link:link}});
-  var e = new Event("asdf");
-  e.id = id;
-  e.link = link;
+  var e = new CustomEvent('asdf', {detail:{id: ID, link: LINK,}, bubbles: true, cancelable: true});
+  // e.id = id;
+  // e.link = link;
   window.dispatchEvent(e);
 }
 
