@@ -2,6 +2,23 @@ $.getScript(chrome.extension.getURL("savestuff.js"), function() {
 	console.log('savestuff.js successfully loaded in piazza.js');
 });
 
+window.addEventListener("asdf", function(e) {
+    chrome.extension.sendMessage({data: {id:e.id, link:e.link}});
+}, true);
+// window.addEventListener("load", function() {
+//     chrome.extension.sendMessage({
+//         type: "dom-loaded", 
+//         data: {
+//             myProperty: "value"
+//         }
+//     });
+// }, true);
+
+// function storePost(id, link) {
+// 	console.log('sending message');
+// 	chrome.extension.sendMessage({data: {id:id, link:link}});
+// }
+
 $class_url = $(location).attr('href');
 
 $(document).on('mouseenter mouseleave', '[id^=FeedItemDropdown]', function(e) {

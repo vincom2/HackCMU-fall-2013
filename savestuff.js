@@ -1,12 +1,16 @@
 var eid = 'lhofepmhjdbipocjjeegpfalgkmggoka';
 
+
+
 function storePost(id, link) {
-	console.log('sending message');
-	chrome.runtime.sendMessage(eid, {data: {id:id, link:link}}, function(r) {
-		console.log(r.data);
-		return true;
-	});
+	console.log('fake event');
+	// chrome.extension.sendMessage({data: {id:id, link:link}});
+  var e = new Event("asdf");
+  e.id = id;
+  e.link = link;
+  window.dispatchEvent(e);
 }
+
 
 // function storePost(id, link) {
 // 	try {
