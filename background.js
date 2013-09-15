@@ -14,7 +14,7 @@ function storePost1(id, link) {
 
 chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	alert(sender.tab ?
+  	// alert(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     if(request.data) {
