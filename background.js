@@ -1,8 +1,8 @@
 function storePost(id, link) {
 	try {
 		console.log("Storing [" + id + ":" + link + "]");
-		window.localStorage.removeItem(id);      // <-- Local storage!
-     	window.localStorage.setItem(id, link);  // <-- Local storage!
+		window.localStorage.removeItem(id);
+     	window.localStorage.setItem(id, link);
 	} catch(e) {
       console.log("Error inside setItem");
       console.log(e);
@@ -17,7 +17,7 @@ chrome.runtime.onMessage.addListener(
                 "from the extension");
     if(request.data) {
     	storePost(request.data.id, request.data.link);
+    	sendResponse({data:"cool"});
     }
-    	
-      // now the data is on your extension side, just save it to extension's localstorage.
-  });
+    return true;
+});

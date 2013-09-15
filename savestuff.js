@@ -2,7 +2,10 @@ var eid = 'lhofepmhjdbipocjjeegpfalgkmggoka';
 
 function storePost(id, link) {
 	console.log('sending message');
-	chrome.runtime.sendMessage(eid, {data: {id:id, link:link}});
+	chrome.runtime.sendMessage(eid, {data: {id:id, link:link}}, function(r) {
+		console.log(r.data);
+		return true;
+	});
 }
 
 // function storePost(id, link) {
