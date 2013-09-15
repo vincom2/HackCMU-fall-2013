@@ -1,14 +1,16 @@
 var eid = 'lhofepmhjdbipocjjeegpfalgkmggoka';
 
-function storePost(ID, LINK) {
-	console.log('storing post in chrome storage');
-	alert(chrome.storage);
-	chrome.storage.sync.set({data:{id:ID,link:LINK}});
-	// chrome.runtime.sendMessage(eid, {data: {id:id, link:link}}, function(r) {
-	// 	console.log(r.data);
-	// 	return true;
-	// });
+
+
+function storePost(id, link) {
+	console.log('fake event');
+	// chrome.extension.sendMessage({data: {id:id, link:link}});
+  var e = new Event("asdf");
+  e.id = id;
+  e.link = link;
+  window.dispatchEvent(e);
 }
+
 
 // function storePost(id, link) {
 // 	try {

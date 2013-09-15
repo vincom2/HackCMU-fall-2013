@@ -3,9 +3,10 @@ alert('hi');
 // $.getScript(chrome.extension.getURL("savestuff.js"), function() {
 //   console.log('savestuff.js successfully loaded in popup.js');
 // });
-
-for(e in chrome.storage.sync.get(null)) {
-  document.write('qn ' + e.id + ': ' + e.link);
+alert(localStorage);
+for(var i=0; i< localStorage.length; i++) {
+  alert('yo');
+  document.write(localStorage.key(i)+' '+localStorage[localStorage.key(i)]+'\n');
 }
 
 alert('bye');

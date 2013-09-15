@@ -1,6 +1,7 @@
-function storePost(id, link) {
+function storePost1(id, link) {
 	try {
-		console.log("Storing [" + id + ":" + link + "]");
+    alert("storePost1");
+		// console.log("Storing [" + id + ":" + link + "]");
 		window.localStorage.removeItem(id);
      	window.localStorage.setItem(id, link);
 	} catch(e) {
@@ -10,13 +11,14 @@ function storePost(id, link) {
     console.log("Return from setItem" + id + ":" + link);
 }
 
-chrome.runtime.onMessage.addListener(
+
+chrome.extension.onMessage.addListener(
   function(request, sender, sendResponse) {
-  	console.log(sender.tab ?
+  	alert(sender.tab ?
                 "from a content script:" + sender.tab.url :
                 "from the extension");
     if(request.data) {
-    	storePost(request.data.id, request.data.link);
+    	storePost1(request.data.id, request.data.link);
     	sendResponse({data:"cool"});
     }
     return true;

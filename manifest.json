@@ -20,7 +20,7 @@
   },
 
   "web_accessible_resources": [
-    "savestuff.js"
+    "savestuff.js", "piazza.js", "background.js"
   ],
 
   "externally_connectable": {
@@ -28,6 +28,7 @@
   },
 
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js"],
+    "persistent": true
   }
 }
